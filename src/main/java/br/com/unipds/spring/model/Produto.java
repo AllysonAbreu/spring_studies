@@ -1,4 +1,4 @@
-package br.com.unipds.spring.Model;
+package br.com.unipds.spring.model;
 
 public class Produto {
     private int id;

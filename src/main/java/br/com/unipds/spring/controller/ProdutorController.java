@@ -1,9 +1,7 @@
-package br.com.unipds.spring.Controller;
+package br.com.unipds.spring.controller;
 
-import br.com.unipds.spring.Model.Produto;
-import ch.qos.logback.core.util.StringUtil;
+import br.com.unipds.spring.model.Produto;
 import io.micrometer.common.util.StringUtils;
-import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -5,7 +5,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class SubscrtionID {
+public class SubscriptionID {
 
     @ManyToOne
     @JoinColumn(name = "subscribed_user_id")

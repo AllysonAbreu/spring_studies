@@ -11,7 +11,7 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "session_id")
-    private Integer idSession;
+    private Integer sessionId;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;
@@ -27,11 +27,11 @@ public class Session {
     private Conference conference;
 
     public Integer getIdSession() {
-        return idSession;
+        return sessionId;
     }
 
     public void setIdSession(Integer idSession) {
-        this.idSession = idSession;
+        this.sessionId = idSession;
     }
 
     public String getTitle() {

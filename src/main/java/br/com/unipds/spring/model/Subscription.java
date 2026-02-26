@@ -12,22 +12,22 @@ import java.time.LocalDateTime;
 public class Subscription {
 
     @Id
-    private SubscrtionID id;
+    private SubscriptionID id;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    @Column(name = "lvel")
+    @Column(name = "level")
     private Integer level;
 
     @Column(name = "unique_id", nullable = false, length = 45)
     private String uniqueID;
 
-    public SubscrtionID getId() {
+    public SubscriptionID getId() {
         return id;
     }
 
-    public void setId(SubscrtionID id) {
+    public void setId(SubscriptionID id) {
         this.id = id;
     }
 

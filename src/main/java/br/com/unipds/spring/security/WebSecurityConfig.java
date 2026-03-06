@@ -17,10 +17,11 @@ public class WebSecurityConfig {
         return http.csrf( csrf ->  csrf.disable())
         .authorizeHttpRequests( auth -> auth
                 .requestMatchers(HttpMethod.GET, "/open").permitAll()
-                .requestMatchers(HttpMethod.GET, "/swagger-ui/index.html").permitAll()
+                .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                .requestMatchers(HttpMethod.POST, "/login").permitAll()
                 .anyRequest().authenticated()
         )
-        .addFilterBefore(new AuthFilter(), UsernamePasswordAuthenticationFilter.class)
+        .addFilterBefore(new AuthFilterr(), UsernamePasswordAuthenticationFilter.class)
         .build();
     }
 

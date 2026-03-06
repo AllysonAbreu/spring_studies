@@ -1,9 +1,11 @@
 package br.com.unipds.spring.service;
 
-import br.com.unipds.spring.dto.UserDTO;
-import br.com.unipds.spring.model.User;
+import br.com.unipds.spring.dto.MyToken;
+import br.com.unipds.spring.dto.UserLoginDTO;
+import br.com.unipds.spring.model.UserD;
 
 public interface IUserService {
-    User addUser(UserDTO user);
-    User getByUsername(String username);
+    UserD addUser(UserLoginDTO user);
+    UserD getByUsername(String username);
+    MyToken userLogin(UserLoginDTO user);
 }

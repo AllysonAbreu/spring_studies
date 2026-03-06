@@ -1,6 +1,6 @@
 package br.com.unipds.spring.dto;
 
-public record UserDTO(
+public record UserLoginDTO(
         String login,
         String password
 ) {

@@ -1,6 +1,5 @@
 package br.com.unipds.spring.security;
 
-
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,7 +10,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-public class AuthFilter extends OncePerRequestFilter {
+public class AuthFilterr extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(
             HttpServletRequest request,
@@ -19,7 +18,7 @@ public class AuthFilter extends OncePerRequestFilter {
             FilterChain filterChain) throws ServletException, IOException {
         System.out.println("Requisicao " + request.getRequestURL()+" passou pelo filtro");
         if(request.getHeader("Authorization") != null) {
-            Authentication auth = TokenUtil.decode(request);
+            Authentication auth = TokenUtill.decode(request);
             if (auth != null) {
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
